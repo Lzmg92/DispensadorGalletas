@@ -20,22 +20,22 @@ public class MainActivity extends AppCompatActivity {
     private void construyeTabs() {
         spec = th.newTabSpec("TAG1");
         spec.setContent(R.id.tab1);
-        spec.setIndicator("Log");
+        spec.setIndicator("",getResources().getDrawable(R.drawable.usr));
         th.addTab(spec);
 
         spec = th.newTabSpec("TAG2");
         spec.setContent(R.id.tab2);
-        spec.setIndicator("Solicitud");
+        spec.setIndicator("",getResources().getDrawable(R.drawable.cookie));
         th.addTab(spec);
 
         spec = th.newTabSpec("TAG3");
         spec.setContent(R.id.tab3);
-        spec.setIndicator("Registro");
+        spec.setIndicator("",getResources().getDrawable(R.drawable.reg));
         th.addTab(spec);
 
         spec = th.newTabSpec("TAG4");
         spec.setContent(R.id.tab4);
-        spec.setIndicator("?");
+        spec.setIndicator("",getResources().getDrawable(R.drawable.help));
         th.addTab(spec);
     }
 
