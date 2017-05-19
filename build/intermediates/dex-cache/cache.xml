@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/leslie/AndroidStudioProjects/DispensadorGalletas/app/libs/GraphView-4.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3626a38455159707e355da96a61e598fbbc049e9">
+        <dex dex="/home/leslie/AndroidStudioProjects/DispensadorGalletas/app/build/intermediates/pre-dexed/debug/GraphView-4.2.1_8cc38bfc4161368ccd051e10b6bf1454ccc9c4c4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/leslie/AndroidStudioProjects/DispensadorGalletas/app/libs/ksoap2-android-assembly-2.4-jar-with-dependencies.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e8796346a9191a019e936210a2dc50662c57594b">
+        <dex dex="/home/leslie/AndroidStudioProjects/DispensadorGalletas/app/build/intermediates/pre-dexed/debug/ksoap2-android-assembly-2.4-jar-with-dependencies_592e38589eaefdbb0f9c05c7991f304e0a9cf992.jar" />
+    </item>
+
+</items>

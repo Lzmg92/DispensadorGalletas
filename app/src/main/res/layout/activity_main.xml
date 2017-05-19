@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    tools:context="com.example.leslie.dispensadorgalletas10.MainActivity">
+    android:orientation="horizontal">
 
 
     <TabHost
@@ -21,7 +19,10 @@
             <TabWidget
                 android:id="@android:id/tabs"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="@color/colorTab"
+                android:animateLayoutChanges="false" >
+            </TabWidget>
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
@@ -32,43 +33,61 @@
                     android:id="@+id/tab1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@color/colorFondo"
                     android:orientation="vertical">
 
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="122dp"
+                        android:layout_margin="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/profile" />
+
                     <TextView
-                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="30dp"
+                        android:text="Log in" />
+
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="User"
-                        android:textSize="30sp" />
+                        android:textSize="25dp" />
 
                     <EditText
-                        android:id="@+id/editText"
+                        android:id="@+id/txt_user"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:inputType="textPersonName"
-                        android:text="Name" />
+                        android:inputType="textPersonName"/>
 
                     <TextView
-                        android:id="@+id/textView2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Password"
-                        android:textSize="30sp" />
+                        android:textSize="25dp" />
 
                     <EditText
-                        android:id="@+id/editText2"
+                        android:id="@+id/txt_pass"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:inputType="textPassword" />
 
                     <Button
-                        android:id="@+id/button"
-                        android:layout_width="match_parent"
+                        android:id="@+id/btn_login"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Log in"
-                        android:layout_marginTop="50dp"/>
+                        android:layout_gravity="center"
+                        android:background="@color/colorBoton"
+                        android:layout_marginTop="30dp"
+                        android:text="  Log in  " />
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
 
                 </LinearLayout>
 
@@ -76,34 +95,43 @@
                     android:id="@+id/tab2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@color/colorFondo"
+                    android:visibility="gone"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Tipos de Galletas:"
+                        android:text="Tipos de Galletas"
+                        android:textAlignment="center"
                         android:textSize="30sp" />
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/btnG1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Galleta 1"
-                        android:layout_marginTop="20dp"/>
+                        android:layout_height="122dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/colorTab"
+                        android:src="@drawable/guno"/>
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/btnG2"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Galleta 2"
-                        android:layout_marginTop="20dp"/>
+                        android:layout_height="122dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/colorTab"
+                        android:src="@drawable/gdos"/>
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/btnG3"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Galleta 3"
-                        android:layout_marginTop="20dp"/>
+                        android:layout_height="122dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/colorTab"
+                        android:src="@drawable/gtres"/>
 
                 </LinearLayout>
 
@@ -111,26 +139,25 @@
                     android:id="@+id/tab3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:background="@color/colorFondo"
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
-                    <LinearLayout
+                    <ListView
+                        android:id="@+id/lista_registro"
+                        android:background="@color/colorFondo"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:layout_height="match_parent" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Registro"
-                            android:textSize="30sp" />
+                </LinearLayout>
 
-                        <Button
-                            android:id="@+id/btnReg"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Consultar"/>
-
-                    </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/tab4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorFondo"
+                    android:visibility="gone"
+                    android:orientation="vertical">
 
                     <ListView
                         android:layout_width="match_parent"
@@ -140,14 +167,106 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/tab4"
+                    android:id="@+id/tab5"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@color/colorFondo"
+                    android:visibility="gone"
                     android:orientation="vertical">
 
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="122dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="25dp"
+                        android:src="@drawable/profile" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="30dp"
+                        android:text="Perfil" />
+
+                    <TextView
+                        android:id="@+id/lbl_usr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:textAlignment="center"
+                        android:text="User"
+                        android:textSize="25dp" />
+
+                    <TextView
+                        android:id="@+id/lbl_rol"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:textAlignment="center"
+                        android:text="Cliente"
+                        android:textSize="25dp" />
+
+                    <Button
+                        android:id="@+id/btn_logout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorBoton"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:text="  Log out  " />
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:id="@+id/tab6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorFondo"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Cantidad de producto"
+                        android:textSize="25dp"/>
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorTab"
+                        android:id="@+id/list_producto"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Estado Gavetas"
+                        android:textSize="25dp"/>
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorTab"
+                        android:id="@+id/list_gaveta"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorFondo"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <com.jjoe64.graphview.GraphView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/grafica"/>
+
+                </LinearLayout>
 
             </FrameLayout>
         </LinearLayout>
